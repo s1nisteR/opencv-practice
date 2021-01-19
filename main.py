@@ -7,11 +7,11 @@ cv.waitKey(0)
 """
 
 #Video loading
-capture =  cv.VideoCapture("Videos/dog.mp4")
+capture =  cv.VideoCapture("Videos/kitten.mp4")
 while True:
     isTrue, frame = capture.read()
     cv.imshow("My second program", frame)
-    if cv.waitKey(20) & 0xFF == ord('d'):
+    if cv.waitKey(5) & 0xFF == ord('d'):
         break
 
 capture.release()

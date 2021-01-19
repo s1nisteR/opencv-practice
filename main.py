@@ -35,8 +35,8 @@ capture.release()
 cv.destroyAllWindows()
 """
 
-capture = cv.VideoCapture(0)
-changeRes(400, 400)
+capture = cv.VideoCapture(1)
+changeRes(900, 900)
 while True:
     isTrue, frame = capture.read()
     cv.imshow('Original Video', frame)

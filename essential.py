@@ -16,11 +16,11 @@ blurredImage = cv.GaussianBlur(image, (7,7), cv.BORDER_DEFAULT) #(25,25) is the 
                                                                 #Controls the AMOUNT of blurring
 cv.imshow("Blurred Image", blurredImage )
 
-cannyImage = cv.Canny(blurredImage, 100, 175)
+cannyImage = cv.Canny(blurredImage, 100, 175) #(edges detection casess used. The ammounts of blurreing controls the amount of details in the canny image(age detection images)
 cv.imshow('Original Edge Cascade', cannyImage)
 
 
-dilated = cv.dilate(cannyImage , (7,7), iterations=3)
+dilated = cv.dilate(cannyImage , (7,7), iterations=3)#(edges lines will be thicker than normal, erosion:opposite of dialted images)
 cv.imshow('Dilated', dilated)
 
 eroded = cv.erode(dilated, (7,7), iterations=3)

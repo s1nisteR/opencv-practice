@@ -189,3 +189,32 @@ cv.imshow('Cropped', cropped)
 cv.waitKey(0)
 ```
 
+# More on Edge Detection
+
+Grayscale the image first (REQUIRED)
+
+```python
+#Laplacian Edge Detection
+lap = cv.Laplacian(image, cv.CV_64F)
+lap = np.uint8(np.absolute(lap)) #absolute such that gradients are all positive
+#Gradients can be negative or positive depending on black to white and white to black
+#We make all of those gradients positive
+#Show the image now using imshow
+
+#Sobel Edge Detection
+#Sobel can be applied on x and y axes.
+#We will create one for x axis and another for y axis and then combine them together
+sobelx = cv.Sobel(image, cv.CV_64F, 1, 0) #1 is x direction, 0 is y direction
+sobely = cv.Sobel(image, cv.CV_64F, 0, 1)
+#Show these two images using imshow
+
+#Now combine the sobels
+combined_sobel = cv.bitwise_or(sobelx, sobely) #Explain bitwise or
+
+#Show canny as well and explain how canny is a multistep processing(advanced algorithm)
+```
+
+# Face DETECTION With Haar Cascades
+
+<u>To be continued</u>
+

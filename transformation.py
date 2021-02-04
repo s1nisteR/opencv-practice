@@ -24,7 +24,7 @@ def rotate(img, angle, rotPoint = None):
 
 """
 #Flipping an image
-flippedImage = cv.flip(img, -1) #A flag to specify how to flip the array; 0 means flipping around the x-axis and positive value (for example, 1) means flipping around y-axis. Negative value (for example, -1) means flipping around both axes.
+flippedImage = cv.flip(img, -1) #A flag to specify how to flip the image; 0 means flipping around the x-axis and positive value (for example, 1) means flipping around y-axis. Negative value (for example, -1) means flipping around both axes.
 cv.imshow("title", flippedImage)
 
 #Cropping an image

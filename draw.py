@@ -3,10 +3,6 @@ import numpy as np
 
 blank = cv.imread('Photos/cat.jpg')
 
-#Creating an image ourselves
-#blank = np.zeros((500,500,3), dtype='uint8') ##np.zeros((height, width, color channnels), dtype='uint8)
-#cv.imshow('Blank Image', blank)
-
 #Manually painting an image over a range
 blank[0:100, 0:100] = 0,255,0
 cv.imshow('Painted Image', blank)

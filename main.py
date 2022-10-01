@@ -14,27 +14,6 @@ def changeRes(width,height):
     capture.set(3,width)
     capture.set(4,height)
 
-"""
-picture = cv.imread("Photos/cat_large.jpg")
-resizedImage = rescaleFrame(picture, 0.10)
-cv.imshow("My first program", resizedImage)
-cv.waitKey(0)
-"""
-
-"""
-# Reading Videos
-capture = cv.VideoCapture('Videos/kitten.mp4')
-while True:
-    isTrue, frame = capture.read()
-    resizedFrame = rescaleFrame(frame, 0.25)
-    cv.imshow('Original Video', frame)
-    cv.imshow('Video', resizedFrame)
-    if cv.waitKey(300) & 0xFF==ord('d'):
-        break
-capture.release()
-cv.destroyAllWindows()
-"""
-
 capture = cv.VideoCapture(1)
 changeRes(900, 900)
 while True:
